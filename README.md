@@ -10,8 +10,7 @@ Bases de données : Fichiers généraux de l'Etat (1978 - 2009) et Siasp (2010 -
 **Publication Insee Focus à venir**
 
 ________________
-English
-----------------
+
 
 Two-month internship in the Employment and Income from Activity department (DERA) of the INSEE General Directorate (DG) in Montrouge, France. 
 
