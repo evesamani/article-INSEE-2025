@@ -15,8 +15,11 @@ ________________
 Two-month internship in the Employment and Income from Activity department (DERA) of the INSEE General Directorate (DG) in Montrouge, France. 
 
 Internship supervisors : Benjamin Gilbert (administrator INSEE) and Fanny Godet (administrator INSEE)
+
 <u> Internship subject :<u> *Historical study of gender inequalities in the senior civil service (1978 - 2021).*
+
 Databases : General state files (Fichiers généraux de l'Etat, 1978-2009), Siasp (2010 - 2021) [French administrative databases]
+
 
 **INSEE Focus publication upcoming (only available in French)**
 
