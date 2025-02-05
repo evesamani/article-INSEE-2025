@@ -7,12 +7,12 @@ Internship supervisors : Benjamin Gilbert (administrator INSEE) and Fanny Godet 
 Databases : General state files (Fichiers généraux de l'Etat, 1978-2009), Siasp (2010 - 2021) [French administrative databases].
 
 
-**Publication upcoming in the INSEE Références __Emploi, chômage et revenus du travail_**
+**Publication upcoming in the INSEE Références _Emploi, chômage et revenus du travail_**
 
 
 
 In this repository, you'll find working and unpublished results, as well as sample code. My internship report is in French. 
-An informal translation of my forthcoming publication is available in English. Please note that this is a public statistics publication that meets certain criteria of phrasing and presentation of figures. This study will be available in the 2025 Edition of INSEE Références __Emploi, chômage et revenus du travail_.
+An informal translation of my forthcoming publication is available in English. Please note that this is a public statistics publication that meets certain criteria of phrasing and presentation of figures. This study will be available in the 2025 Edition of INSEE Références _Emploi, chômage et revenus du travail_.
 
 ______
 
