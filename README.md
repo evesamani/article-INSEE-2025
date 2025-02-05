@@ -7,12 +7,12 @@ Internship supervisors : Benjamin Gilbert (administrator INSEE) and Fanny Godet 
 Databases : General state files (Fichiers généraux de l'Etat, 1978-2009), Siasp (2010 - 2021) [French administrative databases].
 
 
-**Publication upcoming in the INSEE Références <u> Emploi, chômage et revenus du travail </u>**
+**Publication upcoming in the INSEE Références __Emploi, chômage et revenus du travail_**
 
 
 
 In this repository, you'll find working and unpublished results, as well as sample code. My internship report is in French. 
-An informal translation of my forthcoming publication is available in English. Please note that this is a public statistics publication that meets certain criteria of phrasing and presentation of figures. This study will be available in the 2025 Edition of INSEE Eéférences <u> Emploi, chômage et revenus du travail </u>.
+An informal translation of my forthcoming publication is available in English. Please note that this is a public statistics publication that meets certain criteria of phrasing and presentation of figures. This study will be available in the 2025 Edition of INSEE Références __Emploi, chômage et revenus du travail_.
 
 ______
 
@@ -24,10 +24,8 @@ Référents : Benjamin Gilbert (Administrateur INSEE) et Fanny Godet (Administra
 <u>Sujet du stage :</u> *Etude historique des inégalités de genre dans la haute fonction publique d'Etat (1978 - 2021).*    
 Bases de données : Fichiers généraux de l'Etat (1978 - 2009) et Siasp (2010 - 2021).  
 
+
 Une traduction informelle de ma publication à venir est disponible en anglais. Veuillez noter qu'il s'agit d'un dossier de statistique public répondant à certains critères de formulations et de présentations des chiffres. Cette étude sera disponible dans l'édition 2025 de l'Insee références Emploi, chômage et revenus du travail. 
 
 
 
-
-
-Nota Bene : In this repository, you'll find working and unpublished results, as well as sample code. My internship report is in French.
