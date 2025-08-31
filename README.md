@@ -8,12 +8,10 @@ Internship supervisors : Benjamin Gilbert (administrator INSEE).
 Databases : General state files (Fichiers généraux de l'Etat, 1978-2009), Siasp (2010 - 2021) [French administrative databases].
 
 
-**Publication upcoming in the INSEE Références _Emploi, chômage et revenus du travail_**
 
+An informal English translation of my publication is available here. Please note that this is a public statistics publication that meets certain criteria regarding phrasing and presentation of figures. The official study is available in the 2025 Edition of INSEE Références Emploi, chômage et revenus du travail at the following [link to the French publication](https://www.insee.fr/fr/statistiques/8376898?sommaire=8376908).
 
-
-In this repository, you'll find working and unpublished results, as well as sample code. My internship report is in French. 
-An informal translation of my forthcoming publication is available in English. Please note that this is a public statistics publication that meets certain criteria of phrasing and presentation of figures. This study is available in the 2025 Edition of INSEE Références _Emploi, chômage et revenus du travail_ at the following [link to access to the French publication](https://www.insee.fr/fr/statistiques/8376898?sommaire=8376908)
+This article will be presented at the internal INSEE seminar "Atelier du DERA" at Montrouge, France  on September 8, 2025, and as a poster session at the [GenderGaps Conference 2025](https://grape.org.pl/GGaps2025) at Warsaw, Poland, on September 12 & 13, 2025. The repository includes the poster and an English version of the article, which is informal and not an official publication.
 
 
 ______
@@ -21,14 +19,16 @@ ______
 **Eléments de stage d'ouverture au monde professionnel 2023-2024 de 1ère année à l'ENSAE.** 
 
 Juin - Aout 2024 : Stage de 2 mois au sein du Département de l'emploi et des revenus d'activité (DERA) de la Division des statistiques démographiques sociales (DSDS) de la Direction générale de l'INSEE à Montrouge.  
-Juin 2025 : Publication de mon étude 
+Juin 2025 : Publication de mon étude "Dans les grands corps de l'État, les inégalités salariales liées au genre se cumulent au fil de la carrière" parmi les dossiers de l'édition 2025 de l'Insee Références *Emploi, chômage et revenus du travail*. 
 
 Référents : Benjamin Gilbert (Administrateur INSEE) et Fanny Godet (Administrateur INSEE).  
 <u>Sujet du stage :</u> *Etude historique des inégalités de genre dans la haute fonction publique d'Etat (1978 - 2021).*    
 Bases de données : Fichiers généraux de l'Etat (1978 - 2009) et Siasp (2010 - 2021).  
 
 
-Une traduction informelle de ma publication à venir est disponible en anglais. Veuillez noter qu'il s'agit d'un dossier de statistique public répondant à certains critères de formulations et de présentations des chiffres. Cette étude est disponible dans l'édition 2025 de l'Insee références Emploi, chômage et revenus du travail [au lien suivant](https://www.insee.fr/fr/statistiques/8376898?sommaire=8376908)
+Une traduction anglaise informelle de ma publication est disponible ici. Veuillez noter qu’il s’agit d’une publication en statistique publique, respectant certains critères de formulation et de présentation des figures. L’étude officielle est disponible dans l’édition 2025 d’INSEE Références Emploi, chômage et revenus du travail à l’adresse suivante : lien vers la publication en français.
+
+Cet article sera présenté au séminaire interne de l’INSEE “Atelier du DERA” à Montrouge, France, le 8 septembre 2025, et à la poster session de la [GenderGaps Conference 2025](https://grape.org.pl/GGaps2025) à Varsovie en Pologne, les 12 et 13 septembre 2025. Le poster ainsi qu’une version anglaise non officielle de l’article sont disponible sur ce repository.
 
 
 
