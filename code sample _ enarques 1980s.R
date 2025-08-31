@@ -9,6 +9,10 @@
 ## DATE DE CREATION : 05/07/2024
 ## ---------------------------
 
+###############################
+## /!\ Raw code, unformatted ##
+###############################
+
 ## ---------------------------
 ## OPTIONS
 
@@ -898,6 +902,7 @@ ggplot(diff_sal) +
 
 diff_salariale_carriere <- sum(diff_sal$diff_salariale_annuelle) 
 print(paste("La différence salariale entre les femmes et les hommes sur 30 ans de carrière est en moyenne de :", diff_salariale_carriere))
+
 
 
 
