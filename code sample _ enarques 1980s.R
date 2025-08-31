@@ -9,9 +9,6 @@
 ## DATE DE CREATION : 05/07/2024
 ## ---------------------------
 
-## indication d'un répertoire de travail
-setwd("X:/HAB-EFP-STAGES/")
-
 ## ---------------------------
 ## OPTIONS
 
@@ -45,7 +42,7 @@ library(duckdb)
 vect_annee_fge = c("1978", "1980", "1982", "1983", "1984", "1985", "1986", "1988", "1989", "1990", "1991", "1992", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009")
 vect_anne_ane = c("1994", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009")
 
-ane_1994 <- read_delim("X:/HAB-EFP-STAGES/Données/FGE/Documentation/Nomenclatures/Grades/grades_ane_1994.csv", col_types = cols(grade_ANE = col_character()))
+ane_1994 <- read_delim("xxx", col_types = cols(grade_ANE = col_character()))
 ane_1994 <- ane_1994 %>%
   select("grade_ANE", "LICORPS", "LIGRADE") %>%
   collect()
@@ -54,7 +51,7 @@ list_annee <- list()
 #Boucle de jointure pour les fichiers fge allant de 1978 à 1992 avec le fichier ane_1994
 for (annee in vect_annee_fge[1:12]) {
   fge_annee <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_",
+    paste0("xxx",
            annee,
            ".parquet"),
     format="parquet") %>%
@@ -76,13 +73,13 @@ join_fge_ane <- do.call(rbind, lapply(list_annee, as.data.frame)) %>% collect()
 #Jointure des fichiers fge d'après 1994
 for (annee in vect_anne_ane[-1]) {
   ane_annee <- fread(
-    paste0("X:/HAB-EFP-STAGES/Données/FGE/Documentation/Nomenclatures/Grades/grades_ane_",
+    paste0("xxx",
            annee,
            ".csv"),
     colClasses="character", keepLeadingZeros = TRUE) %>%
     select(LICORPS, LIGRADE, grade_ANE)
   fge_annee <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_",
+    paste0("xxx",
            annee,
            ".parquet"),
     format="parquet") %>%
@@ -107,7 +104,7 @@ join_fge_ane <- do.call(rbind, lapply(list_annee, as.data.frame)) %>% collect()
 ## -------- Etape 1 : SUIVI POPULATION | GRANDS CORPS ADMINISTRATIFS 1980-1989 -------------------------
 
 ## ------- INITIALISATION : 1980 -------------------------------------------
-ena_80s <- open_dataset("X:/HAB-EFP-STAGES/Données/FGE/fge_1980.parquet", format="parquet") %>%
+ena_80s <- open_dataset("xxx/fge_1980.parquet", format="parquet") %>%
   select(GRADE, SN, NI, DPC, ENREG) %>%
   filter(GRADE == "12907511") %>%
   #Le grade 12907511 correspond aux énarques
@@ -143,7 +140,7 @@ smic_ante_2000 <- read.csv2("Z:/WINDOWS/smic39.csv") %>%
 
 smic <- rbind(smic_ante_2000, smic_post_2000) %>% distinct(.keep_all = TRUE) %>% collect()
 
-salaire <- open_dataset("X:/HAB-EFP-STAGES/Données/FGE/fge_1980.parquet", format="parquet") %>%
+salaire <- open_dataset("xxx/fge_1980.parquet", format="parquet") %>%
   print("suivi salaires") %>%
   select(GRADE, SN, NI, DPC, CAN, ENREG, MIN) %>%
   filter(NI %in% NIR_1980) %>%
@@ -168,7 +165,7 @@ salaire <- open_dataset("X:/HAB-EFP-STAGES/Données/FGE/fge_1980.parquet", forma
 for (an in setdiff(seq(1982, 2009, by=1), c("1981", "1987","1993", "1994", "1995"))) {
   print(an)
   salaire_ena_ad <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_",
+    paste0("xxx",
            an,
            ".parquet"),
     format="parquet") %>%
@@ -206,7 +203,7 @@ salaire_ena <- salaire %>%
 
 vect_annee_siasp = c("2010", "2011", "2012", "2013", "2014","2015", "2016","2017", "2018", "2019", "2020", "2021")
 
-wage <- open_dataset("X:/HAB-EFP-STAGES/Données/SIASP/siasp_2010.parquet", format="parquet") %>%
+wage <- open_dataset("xxx/siasp_2010.parquet", format="parquet") %>%
   print("wage 2010") %>%
   filter(EMP_CHAMP == "FPE") %>%
   select(GRADE, S_NET, nir, LIB_EMPLOI_1, NB_HEURES_REMUN, POSTE_PRINC_AN, N, EMP_MIN) %>%
@@ -231,7 +228,7 @@ wage <- open_dataset("X:/HAB-EFP-STAGES/Données/SIASP/siasp_2010.parquet", form
 for (ano in vect_annee_siasp[2:3]) {
   print(ano)
   wage_techn_80_ad <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/SIASP/siasp_",
+    paste0("xxx",
            ano,
            ".parquet"),
     format="parquet") %>%
@@ -263,7 +260,7 @@ for (ano in vect_annee_siasp[2:3]) {
 for (ano in vect_annee_siasp[4:12]) {
   print(ano)
   wage_techn_80_ad <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/SIASP/siasp_",
+    paste0("xxx",
            ano,
            ".parquet"),
     format="parquet") %>%
@@ -350,7 +347,7 @@ for (annee in decennie80) {
   
   print(annee)
   ena <- open_dataset(
-    paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_",
+    paste0("xxx",
            annee,
            ".parquet"),
     format="parquet") %>%
@@ -384,7 +381,7 @@ for (annee in decennie80) {
   
   #Suivi des carrières et salaires
   
-  salaire <- open_dataset(paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_", annee,".parquet"), format="parquet") %>%
+  salaire <- open_dataset(paste0("xxx", annee,".parquet"), format="parquet") %>%
     print("suivi salaires") %>%
     select(GRADE, SN, NI, DPC, ENREG, CAN, MIN) %>%
     filter(NI %in% NIR_annee[[annee]]) %>%
@@ -408,7 +405,7 @@ for (annee in decennie80) {
   for (an in setdiff(seq(as.numeric(annee)+1, 2009, by=1), c("1987","1993", "1994", "1995"))) {
     print(an)
     salaire_ena_ad <- open_dataset(
-      paste0("X:/HAB-EFP-STAGES/Données/FGE/fge_",
+      paste0("xxx",
              an,
              ".parquet"),
       format="parquet") %>%
@@ -469,7 +466,7 @@ for (annee in decennie80) {
   
   vect_annee_siasp = c("2010", "2011", "2012", "2013", "2014","2015", "2016","2017", "2018", "2019", "2020", "2021")
   
-  wage <- open_dataset("X:/HAB-EFP-STAGES/Données/SIASP/siasp_2010.parquet", format="parquet") %>%
+  wage <- open_dataset("xxx/siasp_2010.parquet", format="parquet") %>%
     print("wage 2010") %>%
     filter(EMP_CHAMP == "FPE") %>%
     select(GRADE, S_NET, nir, LIB_EMPLOI_1, NB_HEURES_REMUN, POSTE_PRINC_AN, N, EMP_MIN) %>%
@@ -494,7 +491,7 @@ for (annee in decennie80) {
   for (ano in vect_annee_siasp[2:3]) {
     print(ano)
     wage_ena_80_ad <- open_dataset(
-      paste0("X:/HAB-EFP-STAGES/Données/SIASP/siasp_",
+      paste0("xxx",
              ano,
              ".parquet"),
       format="parquet") %>%
@@ -525,7 +522,7 @@ for (annee in decennie80) {
   for (ano in vect_annee_siasp[4:12]) {
     print(ano)
     wage_ena_80_ad <- open_dataset(
-      paste0("X:/HAB-EFP-STAGES/Données/SIASP/siasp_",
+      paste0("xxx",
              ano,
              ".parquet"),
       format="parquet") %>%
@@ -627,7 +624,7 @@ effectif_ena_80s <- rbind(effectif_ena_80s, effectif_ena_80) %>%
   collect()
 effectif_ena_80s$SEXE <- factor(effectif_ena_80s$SEXE, levels = c(1, 2), labels = c("Homme", "Femme")) 
 
-write.csv(effectif_ena_80s, file = "X:/HAB-EFP-STAGES/Résultats/Effectifs/effectifs_ena_80s.csv", row.names = FALSE)
+write.csv(effectif_ena_80s, file = "xxx/effectifs_ena_80s.csv", row.names = FALSE)
 
 
 proportion_ena_80s <- effectif_ena_80s %>%
@@ -726,7 +723,7 @@ stat_80s <- ena_annee %>%
   collect()
 
 stat_80s$SEXE <- factor(stat_80s$SEXE, levels = c(1, 2), labels = c("Hommes", "Femmes")) 
-write.csv(stat_80s, file = "X:/HAB-EFP-STAGES/Résultats/Salaires/salaires_80s.csv", row.names = FALSE)
+write.csv(stat_80s, file = "xxx/salaires_80s.csv", row.names = FALSE)
 
 
 ## ------- EXTRACTION DES FICHIERS FINAUX ------------------------------------
@@ -737,16 +734,16 @@ ena_80s_excel <- stat_80s %>%
   select(SEXE, ANNEE, SALAIRE_MENSUEL_MOYEN, SALAIRE_MENSUEL_MEDIAN) %>%
   filter(ANNEE %in% c(1:30)) %>%
   collect()
-write.xlsx(ena_80s_excel, file = "X:/HAB-EFP-STAGES/Résultats/Fichiers excel/salaires_ena_80s.xlsx")
+write.xlsx(ena_80s_excel, file = "xxx/salaires_ena_80s.xlsx")
 
               
-write.xlsx(effectif_ena_80s, file = "X:/HAB-EFP-STAGES/Résultats/Fichiers excel/effectifs_ena_80s.xlsx")
+write.xlsx(effectif_ena_80s, file = "xxx/effectifs_ena_80s.xlsx")
 
 decile_ena_80s <- stat_80s %>%
   mutate(Ecart_interdecile = d9 / d1) %>%
   select(ANNEE, SEXE, Ecart_interdecile, d1, d9) %>%
   collect()
-write.xlsx(decile_ena_80s, file = "X:/HAB-EFP-STAGES/Résultats/Fichiers excel/decile_ena_80s.xlsx")
+write.xlsx(decile_ena_80s, file = "xxx/decile_ena_80s.xlsx")
 
 
 
@@ -901,6 +898,7 @@ ggplot(diff_sal) +
 
 diff_salariale_carriere <- sum(diff_sal$diff_salariale_annuelle) 
 print(paste("La différence salariale entre les femmes et les hommes sur 30 ans de carrière est en moyenne de :", diff_salariale_carriere))
+
 
 
 
